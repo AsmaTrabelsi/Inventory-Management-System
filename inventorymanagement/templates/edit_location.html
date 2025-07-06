@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block content %}
+<style>
+    .btn-yellow {
+        background-color: #fedc3d !important;
+        /* bright yellow */
+        color: #343a40 !important;
+        /* dark text */
+        font-weight: 600;
+        border: none !important;
+        padding: 10px 25px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn-yellow:hover {
+        background-color: #f5cf28 !important;
+        color: #222 !important;
+    }
+</style>
+
+<div class="col-md-6 offset-md-3">
+    <div class="huge">Edit Location</div>
+</div>
+<div class="col-md-6 offset-md-3 border pt-2">
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <!--CSRF TOKEN -->
+                <fieldset class="form-group">
+                    <div class="form-group">
+                        <label class="form-control-label" for="name">Edit Location Name</label>
+                        <input class="form-control form-control-lg" id="name" name="name" required type="text" value="{{ location[1] }}">
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <input type="submit" class="btn-yellow" value="Edit Location">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

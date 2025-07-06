@@ -1,0 +1,213 @@
+{% set hide_bars = true %} {% extends "layout.html" %} {% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    /* your styles (unchanged) */
+    
+    * {
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        background: linear-gradient(to bottom right, #f3f4f6, #fffbea);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .container-login {
+        display: flex;
+        width: 90vw;
+        height: 90vh;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+    
+    .left-panel {
+        flex: 1;
+        padding: 60px;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(to bottom, #f2f4f8, #fffbea);
+    }
+    
+    .content-wrapper {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    p {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        font-weight: 600;
+        color: #888;
+        font-size: 14px;
+        padding-left: 10px;
+        display: block;
+        margin-bottom: 6px;
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 14px;
+        border-radius: 30px !important;
+        border: 1px solid #ccc !important;
+        font-size: 14px;
+        background: #fefefe;
+    }
+    
+    .form-check-input {
+        margin-left: 0.5rem;
+    }
+    
+    .form-check-label {
+        padding-left: 10px;
+        font-weight: 600;
+        color: #888;
+        font-size: 14px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        border-radius: 30px;
+        border: none;
+        background-color: #fedc3d;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .submit-btn:hover {
+        background-color: #e6c732;
+    }
+    
+    .bottom-text {
+        font-size: 13px;
+        color: #666;
+        text-align: center;
+    }
+    
+    .form-check {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+    
+    .form-check-label {
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+    
+    .bottom-text a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+    
+    .right-panel {
+        flex: 1;
+        background: url('https://img.freepik.com/free-photo/business-people-working-laptop-office_1303-26458.jpg') no-repeat center center/cover;
+        position: relative;
+    }
+    
+    .right-panel::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    @media (max-width: 768px) {
+        .container-login {
+            flex-direction: column;
+            height: auto;
+            border-radius: 0;
+        }
+        .right-panel {
+            display: none;
+        }
+    }
+</style>
+
+<div class="container-login">
+    <div class="left-panel">
+        <div class="content-wrapper">
+            <h2>Welcome Back!</h2>
+            <p>Keep your inventory organized and up to date.</p>
+
+
+
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }} {% if form.email.errors %} {{ form.email(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                        <span>{{ error }}</span> {% endfor %}
+                    </div>
+                    {% else %} {{ form.email(class="form-control") }} {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password.label(class="form-control-label") }} {% if form.password.errors %} {{ form.password(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                        <span>{{ error }}</span> {% endfor %}
+                    </div>
+                    {% else %} {{ form.password(class="form-control") }} {% endif %}
+                </div>
+
+                <div class="form-check mb-3">
+                    <label class="form-check-label" for="{{ form.remember.id }}">
+                        {{ form.remember(class="form-check-input") }}
+                        {{ form.remember.label.text }}
+                    </label>
+                </div>
+
+                {{ form.submit(class="submit-btn") }}
+            </form>
+
+            <div class="bottom-text">
+                <p>Don't have an account? <a href="{{ url_for('register') }}">Register Now</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="right-panel"></div>
+</div>
+{% endblock %}

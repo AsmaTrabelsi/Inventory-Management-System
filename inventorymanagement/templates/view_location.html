@@ -1,0 +1,125 @@
+{% extends "layout.html" %} {% block content %}
+<style>
+    .breadcrumb {
+        font-size: 14px;
+        margin-top: 20px;
+        color: #888;
+    }
+    
+    .page-header {
+        background-color: #343a40;
+        color: #fedc3d;
+        padding: 20px 30px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .container-xl {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .page-header h3 {
+        margin: 0;
+        font-weight: bold;
+    }
+    
+    .add-location-btn {
+        background-color: #fedc3d;
+        color: #343a40;
+        font-weight: 600;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 8px;
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .add-location-btn:hover {
+        background-color: #f5cf28;
+    }
+    
+    .table-header,
+    .location-row {
+        background-color: #fff;
+        border: 2px solid #f0f0f0;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        padding: 15px 10px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    
+    .table-header {
+        background-color: #343a40;
+        color: #fedc3d;
+        font-weight: 600;
+    }
+    
+    .table-header>div,
+    .location-row>div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .location-list {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    /* Edit icon style */
+    
+    .edit-icon {
+        color: #28a745;
+        /* bootstrap green */
+    }
+    
+    .edit-icon:hover {
+        color: #1e7e34;
+    }
+    
+    .location-row a {
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+</style>
+
+<!-- FontAwesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<div class="container container-xl px-0">
+    <div class="breadcrumb">
+        <a href="{{ url_for('home') }}">Inventory Manager</a> / Location
+    </div>
+
+    <div class="page-header d-flex justify-content-between align-items-center">
+        <h3>Inventory Location</h3>
+        <button class="add-location-btn" onclick="window.location.href='{{ url_for('add_location') }}';">Add Location</button>
+    </div>
+
+    <div class="table-header row text-center">
+        <div class="col">Location ID</div>
+        <div class="col">Location Name</div>
+        <div class="col">Edit</div>
+    </div>
+
+    <div class="location-list">
+        {% for location in locations %}
+        <div class="location-row row text-center">
+            <div class="col">{{ location[0] }}</div>
+            <div class="col">{{ location[1] }}</div>
+            <div class="col">
+                <a href="{{ url_for('edit_location', location_id=location[0]) }}" title="Edit">
+                    <i class="fas fa-edit edit-icon"></i>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
