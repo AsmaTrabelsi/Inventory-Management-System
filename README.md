@@ -47,3 +47,11 @@ A simple inventory management web application built with **Flask**, **MySQL**, a
 - Python 3.10+
 - MySQL Server
 - pip
+## 🖼️ Aperçu du tableau de bord
+
+![Dashboard](screenshots/home3.png)
+
+## 🔐 Page de connexion
+
+![Login](screenshots/login.png)
+
