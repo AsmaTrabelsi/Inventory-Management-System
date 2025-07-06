@@ -49,9 +49,88 @@ A simple inventory management web application built with **Flask**, **MySQL**, a
 - pip
 ## 🖼️ Aperçu du tableau de bord
 
-![Dashboard](screenshots/home3.png)
+![Dashboard](screenshots/home%203.png)
 
 ## 🔐 Page de connexion
 
 ![Login](screenshots/login.png)
 
+## 🧑‍💻 Enregistrement (Register)
+
+L'utilisateur peut créer un compte via la page d'enregistrement.
+
+![Register](screenshots/register.png)
+
+---
+
+## 📋 Liste des produits
+
+Affiche tous les produits disponibles avec leurs quantités.
+
+![Liste des produits](screenshots/products_list.png)
+
+---
+
+## ➕ Ajouter un produit
+
+Formulaire permettant l'ajout d'un nouveau produit (nom, quantité initiale, utilisateur).
+
+![Ajouter un produit](screenshots/add_product.png)
+
+---
+
+## ✏️ Modifier un produit
+
+Permet de mettre à jour le nom ou la quantité d’un produit.
+
+![Modifier un produit](screenshots/edit_product.png)
+
+---
+
+## 🔄 Mouvement de produit
+
+Les utilisateurs peuvent déplacer un produit d’un emplacement à un autre avec quantité, date et origine/destination.
+
+![Mouvement de produit](screenshots/move_product.png)
+
+---
+
+## 📍 Ajouter un emplacement (location)
+
+Ajoute un nouveau site géographique (ex. Sfax, Tunis, etc.) dans la base.
+
+![Ajouter une location](screenshots/add_location.png)
+
+---
+
+## 📌 Liste des emplacements
+
+Liste tous les emplacements disponibles dans la base.
+
+![Liste des locations](screenshots/location_list.png)
+
+---
+
+## 🛠️ Modifier un emplacement
+
+Permet de modifier le nom d’un emplacement.
+
+![Modifier une location](screenshots/edit_location.png)
+
+---
+
+## 🚚 Liste des mouvements
+
+Affiche tous les transferts de produits d’un emplacement à un autre.
+
+![Liste des mouvements](screenshots/movements_list.png)
+
+---
+
+## 📊 Courbe de mouvements
+
+Représente graphiquement les mouvements de stock sur une période.
+
+![Courbe de mouvement](screenshots/movement_chart.png)
+
+---
