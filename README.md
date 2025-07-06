@@ -47,7 +47,8 @@ A simple inventory management web application built with **Flask**, **MySQL**, a
 - Python 3.10+
 - MySQL Server
 - pip
-## 🖼️ Aperçu du tableau de bord
+## 🖼️ Dashboard
+The dashboard provides a quick overview of inventory statistics, product quantities, and recent movements.
 
 ![Dashboard](screenshots/home%203.png)
 
@@ -57,7 +58,7 @@ A simple inventory management web application built with **Flask**, **MySQL**, a
 
 ## 🧑‍💻 Enregistrement (Register)
 
-L'utilisateur peut créer un compte via la page d'enregistrement.
+Users can create an account using the registration page.
 
 ![Register](screenshots/registre.png)
 
@@ -65,7 +66,7 @@ L'utilisateur peut créer un compte via la page d'enregistrement.
 
 ## 📋 Liste des produits
 
-Affiche tous les produits disponibles avec leurs quantités.
+Displays all products with their current quantities and associated actions.
 
 ![Liste des produits](screenshots/products.png)
 
@@ -73,7 +74,7 @@ Affiche tous les produits disponibles avec leurs quantités.
 
 ## ➕ Ajouter un produit
 
-Formulaire permettant l'ajout d'un nouveau produit (nom, quantité initiale, utilisateur).
+Add a new product with its initial quantity.
 
 ![Ajouter un produit](screenshots/add%20products.png)
 
@@ -81,7 +82,7 @@ Formulaire permettant l'ajout d'un nouveau produit (nom, quantité initiale, uti
 
 ## ✏️ Modifier un produit
 
-Permet de mettre à jour le nom ou la quantité d’un produit.
+Edit the name or quantity of an existing product.
 
 ![Modifier un produit](screenshots/edit%20product.png)
 
@@ -89,7 +90,7 @@ Permet de mettre à jour le nom ou la quantité d’un produit.
 
 ## 🔄 Mouvement de produit
 
-Les utilisateurs peuvent déplacer un produit d’un emplacement à un autre avec quantité, date et origine/destination.
+Transfer product quantities between locations.
 
 ![Mouvement de produit](screenshots/move%20product.png)
 
@@ -97,7 +98,7 @@ Les utilisateurs peuvent déplacer un produit d’un emplacement à un autre ave
 
 ## 📍 Ajouter un emplacement (location)
 
-Ajoute un nouveau site géographique (ex. Sfax, Tunis, etc.) dans la base.
+Add new warehouse or city locations.
 
 ![Ajouter une location](screenshots/add%20location.png)
 
@@ -105,7 +106,7 @@ Ajoute un nouveau site géographique (ex. Sfax, Tunis, etc.) dans la base.
 
 ## 📌 Liste des emplacements
 
-Liste tous les emplacements disponibles dans la base.
+View all available locations with option to edit.
 
 ![Liste des locations](screenshots/location.png)
 
@@ -113,7 +114,7 @@ Liste tous les emplacements disponibles dans la base.
 
 ## 🛠️ Modifier un emplacement
 
-Permet de modifier le nom d’un emplacement.
+Update a location’s name.
 
 ![Modifier une location](screenshots/edit%20location.png)
 
@@ -121,7 +122,7 @@ Permet de modifier le nom d’un emplacement.
 
 ## 🚚 Liste des mouvements
 
-Affiche tous les transferts de produits d’un emplacement à un autre.
+History of all product transfers between locations.
 
 ![Liste des mouvements](screenshots/mouvement.png)
 
@@ -129,7 +130,7 @@ Affiche tous les transferts de produits d’un emplacement à un autre.
 
 ## 📊 Courbe de mouvements
 
-Représente graphiquement les mouvements de stock sur une période.
+A line chart showing product movement trends over time.
 
 ![Courbe de mouvement](screenshots/home2.png)
 
