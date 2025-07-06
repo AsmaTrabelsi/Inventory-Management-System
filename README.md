@@ -59,7 +59,7 @@ A simple inventory management web application built with **Flask**, **MySQL**, a
 
 L'utilisateur peut créer un compte via la page d'enregistrement.
 
-![Register](screenshots/register.png)
+![Register](screenshots/registre.png)
 
 ---
 
@@ -67,7 +67,7 @@ L'utilisateur peut créer un compte via la page d'enregistrement.
 
 Affiche tous les produits disponibles avec leurs quantités.
 
-![Liste des produits](screenshots/products_list.png)
+![Liste des produits](screenshots/products.png)
 
 ---
 
@@ -75,7 +75,7 @@ Affiche tous les produits disponibles avec leurs quantités.
 
 Formulaire permettant l'ajout d'un nouveau produit (nom, quantité initiale, utilisateur).
 
-![Ajouter un produit](screenshots/add_product.png)
+![Ajouter un produit](screenshots/add%20products.png)
 
 ---
 
@@ -83,7 +83,7 @@ Formulaire permettant l'ajout d'un nouveau produit (nom, quantité initiale, uti
 
 Permet de mettre à jour le nom ou la quantité d’un produit.
 
-![Modifier un produit](screenshots/edit_product.png)
+![Modifier un produit](screenshots/edit%20product.png)
 
 ---
 
@@ -91,7 +91,7 @@ Permet de mettre à jour le nom ou la quantité d’un produit.
 
 Les utilisateurs peuvent déplacer un produit d’un emplacement à un autre avec quantité, date et origine/destination.
 
-![Mouvement de produit](screenshots/move_product.png)
+![Mouvement de produit](screenshots/move%20product.png)
 
 ---
 
@@ -99,7 +99,7 @@ Les utilisateurs peuvent déplacer un produit d’un emplacement à un autre ave
 
 Ajoute un nouveau site géographique (ex. Sfax, Tunis, etc.) dans la base.
 
-![Ajouter une location](screenshots/add_location.png)
+![Ajouter une location](screenshots/add%20location.png)
 
 ---
 
@@ -107,7 +107,7 @@ Ajoute un nouveau site géographique (ex. Sfax, Tunis, etc.) dans la base.
 
 Liste tous les emplacements disponibles dans la base.
 
-![Liste des locations](screenshots/location_list.png)
+![Liste des locations](screenshots/location.png)
 
 ---
 
@@ -115,7 +115,7 @@ Liste tous les emplacements disponibles dans la base.
 
 Permet de modifier le nom d’un emplacement.
 
-![Modifier une location](screenshots/edit_location.png)
+![Modifier une location](screenshots/edit%20location.png)
 
 ---
 
@@ -123,7 +123,7 @@ Permet de modifier le nom d’un emplacement.
 
 Affiche tous les transferts de produits d’un emplacement à un autre.
 
-![Liste des mouvements](screenshots/movements_list.png)
+![Liste des mouvements](screenshots/mouvement.png)
 
 ---
 
@@ -131,6 +131,6 @@ Affiche tous les transferts de produits d’un emplacement à un autre.
 
 Représente graphiquement les mouvements de stock sur une période.
 
-![Courbe de mouvement](screenshots/movement_chart.png)
+![Courbe de mouvement](screenshots/home2.png)
 
 ---
