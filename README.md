@@ -1,4 +1,4 @@
-# 🇹🇳 Inventory Management System - Tunisia Version
+# Inventory Management System
 
 A simple inventory management web application built with **Flask**, **MySQL**, and **Bootstrap**. This project allows authenticated users to manage product stocks across various Tunisian cities, track inventory movements, and visualize product flows over time.
 
